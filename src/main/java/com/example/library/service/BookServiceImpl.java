@@ -48,10 +48,10 @@ public class BookServiceImpl  implements BookService{
   }
 	//bookRepository.deleteById(id);
 
-	  @Override
-	  public Book selectBookByName(String title) {
-		return bookRepository.findByName(title);
-	}
+//	  @Override
+//	  public Book selectBookByName(String title) {
+//		return bookRepository.findByName(title);
+//	}
 }
 	
 	

@@ -1,32 +1,28 @@
 package com.example.library.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 @Entity
-public class Member {
+public class Member implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String contact;
-	private String member_id;
-	public Member(int id, String name, String contact, String member_id) {
+	private String memberid;
+	
+
+	
+	public Member(int id, String name, String contact, String memberid) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.contact = contact;
-		this.member_id = member_id;
-		
-		
-	}
-	public Member() {
-		super();
-	}
-	@Override
-	public String toString() {
-		return "MemberTable [id=" + id + ", name=" + name + ", contact=" + contact + ", member_id=" + member_id + "]";
+		this.memberid = memberid;
 	}
 	public int getId() {
 		return id;
@@ -46,12 +42,26 @@ public class Member {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
-	public String getMember_id() {
-		return member_id;
+	public String getMemberid() {
+		return memberid;
 	}
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
+	public void setMemberid(String memberid) {
+		this.memberid = memberid;
+	}
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + ", contact=" + contact + ", memberid=" + memberid + "]";
+	}
+	public Member() {
+		super();
 	}
 
-	
+
 }
+
+
+	
+	
+
+	
+

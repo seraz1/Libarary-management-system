@@ -33,13 +33,13 @@ public class BookController {
 
    }	
 	 
-	 @GetMapping("/select")
+	 @GetMapping("/getAllBookDetails")
      public List<Book> selectbok() {
    	 return bookService.selectBook();  
 	 
 	 }	
 	 
-	@GetMapping("/select/id/{id}")
+	@GetMapping("/getAllBookDetails/{id}")
     public Book selectBookById(@PathVariable int id) {
    	return  bookService.selectOneBook(id);
 	
@@ -50,10 +50,10 @@ public class BookController {
    	 return bookService.deleteABook(id);
     
 	 }
-	  @GetMapping("/select/title/{title}")
-       public Book selectBookById(@PathVariable String name) {
-   	   return  bookService.selectBookByName(name);
-   
-	 }     
+//	  @GetMapping("/select/title/{title}")
+//       public Book selectBookById(@PathVariable String name) {
+//   	   return  bookService.selectBookByName(name);
+//   
+//	 }     
 	 
 	 }
